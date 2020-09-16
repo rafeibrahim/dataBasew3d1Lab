@@ -17,5 +17,5 @@ interface UserDao {
 
     @Query("SELECT * FROM user WHERE user.uid = :userid")
     // the @Relation do the INNER JOIN for you ;)
-    fun getUserContacts(userid: Int): UserContact
+    fun getUserContacts(userid: Long): LiveData<UserContact>
 }

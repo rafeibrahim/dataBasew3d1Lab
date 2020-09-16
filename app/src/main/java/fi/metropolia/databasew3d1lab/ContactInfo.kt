@@ -7,5 +7,9 @@ data class ContactInfo(
     val user: Long,
     val type: String, //e.g. phone, email, fb, twitter,...
     @PrimaryKey
-    val value: String)
+    val value: String){
+    //constructor, getter and setter are implicit :)
+    override fun toString() = "$type:  $value"
+}
+
 

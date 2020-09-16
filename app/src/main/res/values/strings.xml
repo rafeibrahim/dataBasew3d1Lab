@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">dataBasew3d1Lab</string>
+    <string-array name="contact_types">
+        <item></item>
+        <item>Phone</item>
+        <item>Twitter</item>
+        <item>Facebook</item>
+        <item>LinkedIn</item>
+        <item>GitHub</item>
+    </string-array>
 </resources>

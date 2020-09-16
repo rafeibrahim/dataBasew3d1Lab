@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_nav_graph"
+    app:startDestination="@id/fragmentUserList">
+
+    <fragment
+        android:id="@+id/fragmentUserList"
+        android:name="fi.metropolia.databasew3d1lab.FragmentUserList"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_fragmentUserList_to_fragmentContactDetails"
+            app:destination="@id/fragmentContactDetails" />
+        <action
+            android:id="@+id/action_fragmentUserList_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentContactDetails"
+        android:name="fi.metropolia.databasew3d1lab.FragmentContactDetails"
+        android:label="fragment_contact_details"
+        tools:layout="@layout/fragment_contact_details" >
+        <argument
+            android:name="uid"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="No Name" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="fi.metropolia.databasew3d1lab.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" >
+        <action
+            android:id="@+id/action_addUserFragment_to_fragmentUserList"
+            app:destination="@id/fragmentUserList" />
+    </fragment>
+</navigation>
