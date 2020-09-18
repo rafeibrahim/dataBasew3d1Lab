@@ -23,30 +23,18 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FragmentUserList : Fragment(R.layout.fragment_user_list) {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //val action = FragmentUserListDirections.actionMain
 
-/*        val action = FragmentUserListDirections.actionFragmentUserListToFragmentContactDetails(2)
-        this.findNavController().navigate(action)*/
         rv_users.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL ,false)
 
         val ump = ViewModelProviders.of(this).get(UserModel::class.java)
         ump.getUsers().observe(this, {contactList ->
-
             rv_users.adapter = UserAdapter(contactList?.sortedBy {that ->
                 that.lastname
             }, requireActivity())
-
         })
-
         }
-
     }
 

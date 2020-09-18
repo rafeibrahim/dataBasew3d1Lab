@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/addUserFragment"
-        android:name="fi.metropolia.databasew3d1lab.AddUserFragment"
+        android:name="fi.metropolia.databasew3d1lab.FragmentAddUser"
         android:label="fragment_add_user"
         tools:layout="@layout/fragment_add_user" >
         <action

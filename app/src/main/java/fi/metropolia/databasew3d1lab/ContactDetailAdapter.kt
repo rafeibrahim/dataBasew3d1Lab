@@ -24,7 +24,6 @@ class ContactDetailAdapter(private val items: List<ContactInfo>): RecyclerView.A
     override fun onBindViewHolder(holder: ContactDetailViewHolder, position: Int) {
         holder.itemView.textView.text = items?.get(position).toString()
     }
-
 }
 
 
